@@ -10,6 +10,13 @@ mongodb的在node.js的数据驱动用的是mongoose。
 
 页面截图如下：
 
+*首页*
+
+![首页](https://joy-yi0905.github.io/express-blog/public/images/index.jpg) 
+
+*更新页*
+
+![更新页](https://joy-yi0905.github.io/express-blog/public/images/update.jpg) 
 
 ### 如何使用
 1.首先下载项目     
