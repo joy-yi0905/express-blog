@@ -32,3 +32,9 @@ mongodb的在node.js的数据驱动用的是mongoose。
 > npm start
 ```
 4.在浏览器中，打开 http://localhost:3000/ 
+
+### 线上案例
+
+基于 Heroku 和 远程数据库 搭建：
+
+[hi-blog](https://hi-blog.herokuapp.com/)
