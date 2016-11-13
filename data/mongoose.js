@@ -1,9 +1,10 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/blog');
+// mongoose.connect('mongodb://localhost/blog');
+mongoose.connect('mongodb://joy-yi:65a4321@ds031607.mlab.com:31607/blog');
 
 var blogSchema = new mongoose.Schema({
-    content: {type: String, unique:true}, // unique 保证数据的唯一，但有时候不管用
+    content: String, // 可设置 unique 保证数据的唯一
     date: String
 }, {collection: 'post'});
 
