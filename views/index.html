@@ -137,8 +137,10 @@ $(function() {
 
     // 更新跳转
     $(document).on('click', '.blog-item .update', function() {
-        var updateContent = $(this).attr('data-content');
-        location.href = '/update?updateBlog=' + updateContent;
+        var updateContent = $(this).attr('data-content'),
+            postId = $(this).parents('.blog-item').attr('data-id');
+        console.log(postId);
+        location.href = '/update/' + postId;
     });
 
     function createPost(data) {

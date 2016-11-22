@@ -15,6 +15,7 @@
         <div class="blog-textarea">
             <textarea name="" class="textarea-add" cols="30" rows="10"></textarea>
         </div>
+        <div class="hidden-content" style="display: none;"><%- postContent %></div>
         <p class="blog-action">
             <a class="btn-update" href="javascript:;">更新</a>
         </p>
@@ -25,14 +26,14 @@
 $(function() {
 
     // 从url读取要更新的内容，简单粗暴处理
-    var oldContent = decodeURI(window.location.search.substr(12));
+    var oldContent = $('.hidden-content').html();
 
     // 设置它到文本域，并保留换行
-    $('.textarea-add').val(oldContent.replace(/\<br\/>/g, '\n'));
+    $('.textarea-add').val(oldContent.replace(/\<br>/g, '\n'));
 
     // 更新
     $('.btn-update').on('click', function() {
-        var updateContent = $('.textarea-add').val().trim().replace(/\n/g, '<br/>');
+        var updateContent = $('.textarea-add').val().trim().replace(/\n/g, '<br>');
 
         if (updateContent === oldContent) {
             alert('内容没有更新！');

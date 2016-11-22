@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
             return;
         }
         // docs 是包含了符合条件的多个文档的一个数组
-        console.log(docs);
+        // console.log(docs);
         res.render('index', { title: '博客首页', name: '博客', content: docs.reverse()});
     });
 
@@ -34,7 +34,7 @@ router.post('/', function(req, res) {
             }
             // newPost is saved!
             console.log('保存成功！');
-            console.log(docs);
+            // console.log(docs);
 
             // 传统方式：res.send(200)会发送至前台，前台页面刷新，get重新获取数据库数据
             // res.send(200);
